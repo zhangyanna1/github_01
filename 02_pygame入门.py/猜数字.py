@@ -2,18 +2,19 @@ import random
 
 class number(object):
 	def __init__(self):
-		self.score = 0
-		self.score_01 = 0
-
+		self.count1 = 0
+		self.jushu = 0
+		self.sum = 0
 	def count(self):
 		
 		y = random.randint(0,99)
 		print(y)
-		self.score = 0 
-		self.score_01 += 1
+		self.count1 = 0 
+		self.jushu += 1
 
 		while True:
-			self.score +=1
+			self.count1 +=1
+
 			x = int(input('请输入一个整数'))
 			if x > y and x > y:
 				print('你猜的数字过大')
@@ -22,9 +23,10 @@ class number(object):
 			elif x == y:
 				print('你猜中了')
 				break
-		print('一共猜了%s次游戏'%self.score)
-		print('一共玩了%s局游戏'%self.score_01)				 
-
+		self.sum += self.count1
+		print('一共猜了%s次游戏'%self.count1)
+		print('一共玩了%s局游戏'%self.jushu)				 
+		print(self.sum/self.jushu)
 
 
 	def aa(self):

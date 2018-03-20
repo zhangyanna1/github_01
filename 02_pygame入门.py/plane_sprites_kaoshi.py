@@ -46,8 +46,13 @@ class Enemy(GameSprite):
 		#　敌机的初始速度是1~3
 		self.speed = random.randint(3,5)
 		#设置敌机的随机移动速度
-		self.rect.bottom = 0
+		#self.rect.bottom = 0
+		
+		#表示敌机的ｘ轴的位置
 		self.rect.x = SCREEN_RECT.left
+
+
+		#６０表示敌机离屏幕的底部的距离
 		y = SCREEN_RECT.bottom - self.rect.bottom - 60
 		self.rect.y = random.randint(0,y)
 		#self.rect.y = SCREEN_RECT.width
